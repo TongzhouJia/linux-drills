@@ -1,0 +1,7 @@
+.DS_Store
+*.swp
+*~
+# 做题时在仓库里随手造的临时产物
+*.bak
+*.tmp
+scratch/
