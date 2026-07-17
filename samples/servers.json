@@ -1,0 +1,9 @@
+{
+  "datacenter": "dc1",
+  "servers": [
+    {"name": "web1",   "cpu": 45, "mem": 60, "status": "up",   "tags": ["prod","web"]},
+    {"name": "web2",   "cpu": 90, "mem": 85, "status": "up",   "tags": ["prod","web"]},
+    {"name": "db1",    "cpu": 30, "mem": 70, "status": "down", "tags": ["prod","db"]},
+    {"name": "cache1", "cpu": 15, "mem": 40, "status": "up",   "tags": ["prod","cache"]}
+  ]
+}

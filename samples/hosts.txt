@@ -1,0 +1,4 @@
+# fleet inventory (one host per line; # = comment)
+server1
+server2
+repo

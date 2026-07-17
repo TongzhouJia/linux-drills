@@ -1,0 +1,5 @@
+username,fullname,group,shell
+jsmith,John Smith,devs,/bin/bash
+agarcia,Ana Garcia,devs,/bin/bash
+wchen,Wei Chen,ops,/bin/bash
+rpatel,Ravi Patel,ops,/bin/sh

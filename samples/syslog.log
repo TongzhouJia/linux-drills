@@ -1,0 +1,14 @@
+Jul 17 10:00:01 server1 sshd[1234]: Accepted password for tongzhou from 10.0.0.5 port 51000 ssh2
+Jul 17 10:00:05 server1 sshd[1235]: Failed password for invalid user admin from 203.0.113.7 port 40000 ssh2
+Jul 17 10:01:00 server1 cron[2001]: (root) CMD (/usr/bin/backup.sh)
+Jul 17 10:02:15 server1 kernel: Out of memory: Killed process 3000 (java)
+Jul 17 10:03:00 server1 nginx[4000]: 10.0.0.1 GET /index.html 200
+Jul 17 10:04:30 server1 sshd[1236]: Failed password for invalid user oracle from 203.0.113.7 port 40012 ssh2
+Jul 17 10:05:00 server1 systemd[1]: Started Session 5 of user tongzhou.
+Jul 17 10:06:00 server1 nginx[4000]: 10.0.0.2 GET /api 500
+Jul 17 10:07:45 server1 sshd[1237]: Failed password for invalid user admin from 198.51.100.9 port 33001 ssh2
+Jul 17 10:08:00 server1 cron[2002]: (tongzhou) CMD (/home/tongzhou/report.sh)
+Jul 17 10:09:10 server1 kernel: EXT4-fs error (device sda1) in ext4_reserve
+Jul 17 10:10:00 server1 sshd[1238]: Accepted publickey for tongzhou from 10.0.0.5 port 51002 ssh2
+Jul 17 10:11:30 server1 sshd[1239]: Failed password for root from 203.0.113.7 port 40020 ssh2
+Jul 17 10:12:00 server1 nginx[4000]: 10.0.0.3 POST /api/login 503
