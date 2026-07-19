@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # 脚本骨架 —— 从 B3.1 起每道题都从这儿开始。
-# 用法：cp lib/skeleton.sh solutions/B4.1/your-script.sh
+# Usage: cp lib/skeleton.sh 02-bash/B4-ops/B4.1-log-analysis/B4.1-log-analysis.sh
 #
 # set -e          任一命令失败就退出
 # set -u          用到未定义变量就报错（打错变量名不再静默变空）

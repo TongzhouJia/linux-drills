@@ -2,12 +2,12 @@
 #
 # 练习机重装 / 快照回滚之后，一条命令把环境拉回来：
 #
-#   curl -fsSL https://raw.githubusercontent.com/TongzhouJia/bash-practice/main/setup/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/TongzhouJia/linux-drills/main/setup/bootstrap.sh | bash
 #
 set -euo pipefail
 
-REPO_SSH="git@github.com:TongzhouJia/bash-practice.git"
-REPO_DIR="$HOME/bash-practice"
+REPO_SSH="git@github.com:TongzhouJia/linux-drills.git"
+REPO_DIR="$HOME/linux-drills"
 GIT_NAME="Tom Jia"
 GIT_EMAIL="jiatongzhou111@gmail.com"
 
@@ -23,7 +23,7 @@ echo "==> SSH key"
 mkdir -p "$HOME/.ssh" && chmod 700 "$HOME/.ssh"
 NEW_KEY=0
 if [[ ! -f "$HOME/.ssh/id_ed25519" ]]; then
-    ssh-keygen -t ed25519 -N '' -C "bash-practice-vm" -f "$HOME/.ssh/id_ed25519" -q
+    ssh-keygen -t ed25519 -N '' -C "linux-drills-vm" -f "$HOME/.ssh/id_ed25519" -q
     NEW_KEY=1
 fi
 
@@ -48,8 +48,8 @@ if (( NEW_KEY )); then
     echo "  ⚠️  新生成了 key，push 之前要先注册到 GitHub。在 Mac 上跑："
     echo
     echo "      ssh root@$(hostname -I | awk '{print $1}') 'cat ~/.ssh/id_ed25519.pub' > /tmp/vm.pub"
-    echo "      gh repo deploy-key add /tmp/vm.pub --repo TongzhouJia/bash-practice \\"
-    echo "        --title bash-practice-vm --allow-write"
+    echo "      gh repo deploy-key add /tmp/vm.pub --repo TongzhouJia/linux-drills \\"
+    echo "        --title linux-drills-vm --allow-write"
     echo
     read -rp "  加完按回车继续…" _
 fi
@@ -63,4 +63,4 @@ fi
 
 echo
 echo "✅ 好了：$REPO_DIR"
-echo "   题目 → drills/    你的答案 → solutions/    骨架 → lib/skeleton.sh"
+echo "   Drills and your .sh logs live under 01-.. through 09-..  Skeleton: lib/skeleton.sh"
