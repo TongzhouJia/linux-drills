@@ -3,7 +3,7 @@
 Linux practice drills. 85 knowledge points (KPs) across 9 domains, ~774 exercises to draw from.
 Drills are written in English; answers are not stored here — the point is to write them yourself.
 
-See **[PLAN.md](PLAN.md)** for the full KP list and progress.
+A KP folder holding a `.sh` file means that KP has been practised — `ls` is the progress table.
 
 ## Layout
 
