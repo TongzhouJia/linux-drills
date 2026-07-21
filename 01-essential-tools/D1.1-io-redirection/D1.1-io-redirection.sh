@@ -44,3 +44,15 @@ head -n -20 /var/log/kmsg_snap.log | sudo tee /tmp/temp.log > /dev/null
 cat /tmp/temp.log 
 sudo mv /tmp/temp.log /var/log/kmsg_snap.log
 cat /var/log/kmsg_snap.log 
+ls
+hostname >> /root/kernel.txt
+date >> /root/kernel.txt
+cat /root/kernel.txt 
+ls -l /etc does-not-exist /var
+ls -l /etc /does-not-exist /var
+ls -l /etc /does-not-exist /var
+ls -l /etc /does-not-exist /var 1> /root/good.txt 2>/root/bad.txt
+cat /root.good.txt
+cat /root/good.txt
+cat /root/bad.txt
+find /etc -name "*.conf"
