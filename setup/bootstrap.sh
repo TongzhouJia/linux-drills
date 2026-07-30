@@ -45,7 +45,7 @@ sort -u "$HOME/.ssh/known_hosts" -o "$HOME/.ssh/known_hosts"
 
 if (( NEW_KEY )); then
     echo
-    echo "  ⚠️  新生成了 key，push 之前要先注册到 GitHub。在 Mac 上跑："
+    echo "  ⚠️  新生成了 key，push 之前要先注册到 GitHub。在宿主机上跑："
     echo
     echo "      ssh root@$(hostname -I | awk '{print $1}') 'cat ~/.ssh/id_ed25519.pub' > /tmp/vm.pub"
     echo "      gh repo deploy-key add /tmp/vm.pub --repo TongzhouJia/linux-drills \\"

@@ -35,8 +35,10 @@ Nine domain directories at the top level. Every KP gets its own folder holding t
 
 ## Practice machine
 
-VM at 192.168.89.10 (CentOS Stream 10, root login). Repo lives at
-`/home/bash-practice/linux-drills`.
+A throwaway Linux VM with root login, provisioned from scratch and restored with
+`setup/bootstrap.sh`. The repo lives at `/home/bash-practice/linux-drills` on it.
+
+The previous VM is gone; a replacement has not been built yet, so the loop below is on hold.
 
 Heads up: domains 04, 05, 07 and 09 (storage, filesystems, networking, SELinux) need a second
 host and spare disks. They can't be done on the single VM yet — the drills are stored regardless.
