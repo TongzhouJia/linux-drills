@@ -26,3 +26,42 @@ mkdir -p /data/myapp/config
 touch /data/myapp/config/settings.conf
 semanage fcontext -a -t httpd_sys_content_t '/data/myapp(/.*)?'
 restorecon -Rv /data/myapp
+ip a
+ps -eZ | grep sshd
+id
+id root
+id -u
+id -Z
+id -g
+id -G
+matchpathcon
+matchpathcon /var/www/html/test.html
+chcon -t samba_share_t /var/www/html/test.html
+ls -Z /var/www/html/test.html
+cat /var/www/html/test.html
+ll /var/www/html/
+echo "hello" > /var/www/html/test.html
+ls -Z /var/www/html/test.html
+chcon -t samba_share_t /var/www/html/test.html
+ls -Z /var/www/html/test.html
+matchpathcon /var/www/html/test.html
+restorecon -v /var/www/html/test.html
+semanage fcontext -l
+semanage fcontext -l -C
+getenforce
+curl -I http://localhost/
+systemctl status httpd
+systemctl start httpd
+man systemctl
+systemctl reload httpd
+systemctl status httpd
+curl -I http://localhost/
+ausearch -m avc -ts recent
+curl -I http://localhost/
+sealert -a /var/log/audit/audit.log
+ll /var/www/html
+cat /var/www/html/test.html 
+cat /etc/httpd/conf/httpd.conf
+bat /etc/httpd/conf/httpd.conf
+vi /etc/httpd/conf/httpd.conf
+ll /var/www/html/
