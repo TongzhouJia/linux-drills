@@ -92,3 +92,83 @@ ls /dev/vdb2 2>&1
 partprobe /dev/vdb
 partprobe 
 partx -u /dev/vdb
+
+# --- 2026-10-18 redo ---
+lsblk
+lsblk -f
+df -h
+lsblk /dev/vdb
+lsblk 
+ls /dev
+ls /dev/vda
+ls /dev/vda/
+ll /dev/vda/
+ll /dev/vda
+pvs
+pvdisplay
+lsblk
+lsblk -f
+
+lsblk /dev/vdb
+fdisk -l /dev/vdb
+fdisk /dev/vdb
+lsblk /dev/vdb
+fdisk -l /dev/vdb
+ll /dev/vdb1
+fdisk -l /dev/vdb
+parted -s /dev/vdc mklabel gpt
+parted -s /dev/vdc mkpart primary 1MiB 2049MiB
+
+parted  /dev/vdc 
+parted -ll
+parted -l
+mkfs.ext4 /dev/vdb1
+lsblk
+lsblk -f
+lsblk -f 
+lsblk -f |grep vdb1
+file -s /dev/vdb
+file -s /dev/vdb1
+mkfs.ext4 -L MYDATA /dev/vdb1
+mkfs.xfs /dev/vdc1
+mkfs.ext4 /dev/vdc1
+df -h
+du -h
+lsblk -f
+fdisk /dev/vdb
+mkdir -p /mnt/data1
+
+
+ll /mnt/
+mount /dev/vdb1 /mnt/data1
+df -h /mnt/data1
+lsblk -f /dev/vdb1
+echo "hello" > /mnt/data1/test.txt && cat /mnt/data1/test.txt
+blkid /dev/vdb1
+# /dev/vdb1: UUID="a1b2c3d4-e5f6-7890-abcd-ef1234567890" TYPE="ext4"
+blkid -s UUID -o value /dev/vdb1        # 只输出 UUID 本身，方便复制
+cp /etc/fstab /etc/fstab.bak            # 先备份!
+vim /etc/fstab
+vi /etc/fstab
+cat /etc/fstab
+umount /mnt/data1              # 先卸载，才能验证 fstab 真的有效
+mount -a                       # 按 fstab 挂载所有条目
+echo $?                        # 必须是 0!
+vi /etc/fstab
+umount /mnt/data1              # 先卸载，才能验证 fstab 真的有效
+mount -a                       # 按 fstab 挂载所有条目
+echo $?                        # 必须是 0!
+mount -a
+mount -av
+df -h /mnt/data1
+findmnt /mnt/data1
+findmnt --verify --verbose
+systemctl daemon-reload
+findmnt --verify --verbose
+lsblk /dev/vdb
+findmnt
+findmnt /dev/vdb2
+echo $?
+findmnt /dev/vdb2|| echo aaa
+cd sdkfjsdlfkj
+cd sdlkfjsdlkfj || echo bbb
