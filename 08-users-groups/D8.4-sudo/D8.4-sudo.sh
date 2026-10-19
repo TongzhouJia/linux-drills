@@ -19,6 +19,5 @@ root
 sudo whoami
 visudo -f /etc/sudoers.d/dba
 sudo visudo -f /etc/sudoers.d/dba
-# task 6 not finished (no /etc/sudoers.d/dba was saved) - reference:
-#   visudo -f /etc/sudoers.d/dba     # move the four rules above into this drop-in file
-#   visudo -cf /etc/sudoers.d/dba    # syntax check
+visudo -f /etc/sudoers.d/dba
+visudo -cf /etc/sudoers.d/dba

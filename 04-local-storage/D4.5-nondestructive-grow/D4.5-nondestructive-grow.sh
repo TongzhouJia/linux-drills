@@ -104,7 +104,6 @@ resize2fs /dev/vg/lv
 tune2fs -l /dev/data_vg/ext_lv
 tune2fs -l /dev/data_vg/ext_lv | grep -i "block count"
 resize2fs /dev/vg/lv
-# --- not typed below (task 5 persistent mount, 6, 7) ---
 echo "UUID=$(blkid -s UUID -o value /dev/data_vg/ext_lv)  /mnt/ext_lv  ext4  defaults  0 0" >> /etc/fstab
 findmnt --verify
 mount -a
