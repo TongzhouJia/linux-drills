@@ -45,3 +45,35 @@ systemctl enable --now backup.timer
 systemctl is-enabled backup.timer
 systemctl is-active backup.timer
 systemctl list-timers backup.timer
+
+# --- 2026-10-20 redo ---
+cat > /usr/local/bin/backup.sh <<'EOF'
+#!/bin/bash
+echo "backup ran at $(date)" >> /var/log/backup.log
+EOF
+
+chmod +x /usr/local/bin/backup.sh
+/usr/local/bin/backup.sh  
+vim /etc/systemd/system/backup.service
+systemctl status backup.service
+cat /lib/systemd/system/logrotate.timer
+systemctl daemon-reload
+systemctl enable --now backup.timer
+systemctl is-enabled backup.timer
+systemctl status backup.timer --no-pager
+systemctl list-timers backup.timer
+systemctl start backup.service
+systemctl status backup.service --no-pager
+journalctl -u backup.service --no-pager
+cat /var/log/backup.log 
+systemctl start backup.service
+cat /var/log/backup.log 
+systemctl list-timers --all --no-pager
+systemd-analyze calendar "*-*-* 02:00:00"
+systemd-analyze calendar --iterations=5 "*-*-* 02:00:00"
+systemd-analyze timespan "15min" 
+vim /etc/systemd/system/boottask.service
+systemctl daemon-reload
+systemctl enable --now boottask.timer
+systemctl list-timers boottask.timer
+systemctl enable --now backup.timer
