@@ -18,6 +18,28 @@ mkdir -p /root/rpms && cd /root/rpms
 dnf download star    
 dnf install -y dnf-plugins-core
 dnf download star    
+dnf download tree
+ll *.rpm
+ls
+rpm -qip /root/rpms/tree*.rpm
+rpm -qip /root/rpms/
+rpm -qip *.rpm
+
+rpm -qlp *.rpm
+rpm -ivh *.rpm
+rpm -q tree
+rpm -ql tree
+rpm -q -l tree
+dnf provides /usr/sbin/semanage
+rpm -qf /usr/sbin/semanage
+*/semanage
+dnf provides */semanage
+dnf provides '*/htpasswd'
+dnf provides nmap
+rpm -qa 
+rpm -qa | sort > /root/pkglist.txt
+rpm -qa | wc -l > /root/pkgcount.txt
+dnf history
 dnf repolist --all | grep epel
 dnf config-manager --set-disabled epel
 dnf repolist --all | grep epel
